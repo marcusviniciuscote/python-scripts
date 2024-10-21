@@ -42,11 +42,11 @@ test_docker = "docker run hello-world"
 terminal_comand(update_and_upgrade)
 terminal_comand(install_some_programs)
 terminal_comand(install_zsh)
-terminal_comand(docker_down)
-terminal_comand(docker_dependencies)
-terminal_comand(install_docker)
-terminal_comand(docker_post_install)
-terminal_comand(test_docker)
+#terminal_comand(docker_down)
+#terminal_comand(docker_dependencies)
+#terminal_comand(install_docker)
+#terminal_comand(docker_post_install)
+#terminal_comand(test_docker)
 
 #setting zsh is default
 default_zsh = "chsh -s /usr/bin/zsh"
