@@ -28,8 +28,6 @@ install_some_programs = "sudo apt install -y neofetch vim neovim virtualbox virt
 
 install_zsh = 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"'
 
-default_zsh = "chsh -s /usr/bin/zsh"
-
 install_nerd_font = "wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip && cd ~/.local/share/fonts && unzip JetBrainsMono.zip && rm JetBrainsMono.zip && fc-cache -fv"
 
 docker_down = 'sudo install -m 0755 -d /etc/apt/keyrings && sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc && sudo chmod a+r /etc/apt/keyrings/docker.asc'
@@ -44,6 +42,8 @@ docker_start_on_boot = "sudo systemctl enable docker.service && sudo systemctl e
 
 test_docker = "docker run hello-world"
 
+default_zsh = "chsh -s /usr/bin/zsh"
+
 terminal_comand(update_and_upgrade)
 terminal_comand(install_some_programs)
 terminal_comand(install_zsh)
@@ -52,8 +52,8 @@ terminal_comand(docker_down)
 terminal_comand(docker_dependencies)
 terminal_comand(install_docker)
 terminal_comand(docker_post_install)
-terminal_comand(test_docker)
 terminal_comand(docker_start_on_boot)
+terminal_comand(test_docker)
 terminal_comand(default_zsh)
 
 #adding aliases
