@@ -36,6 +36,8 @@ install_docker = "sudo apt-get install -y docker-ce docker-ce-cli containerd.io 
 
 docker_post_install = "sudo groupadd docker && sudo usermod -aG docker $USER && newgrp docker"
 
+docker_start_on_boot = "sudo systemctl enable docker.service && sudo systemctl enable containerd.service"
+
 test_docker = "docker run hello-world"
 
 
@@ -47,6 +49,7 @@ terminal_comand(install_zsh)
 #terminal_comand(install_docker)
 #terminal_comand(docker_post_install)
 #terminal_comand(test_docker)
+#terminal_comand(docker_start_on_boot)
 
 #setting zsh is default
 default_zsh = "chsh -s /usr/bin/zsh"
