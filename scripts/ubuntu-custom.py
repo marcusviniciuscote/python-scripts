@@ -26,7 +26,9 @@ update_and_upgrade = "sudo apt update && sudo apt upgrade -y && sudo apt autorem
 shutdown = "shutdown -h now"
 install_some_programs = "sudo apt install -y neofetch vim neovim virtualbox virtualbox-guest-additions-iso virtualbox-guest-utils eza bat zsh zsh-autosuggestions zsh-syntax-highlighting htop ca-certificates curl"
 
-install_zsh = "sh -c '$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)'"
+install_zsh = "sudo sh -c '$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)'"
+
+configure_zsh = "zsh"
 
 default_zsh = "chsh -s /usr/bin/zsh"
 
@@ -45,6 +47,7 @@ test_docker = "docker run hello-world"
 terminal_comand(update_and_upgrade)
 terminal_comand(install_some_programs)
 terminal_comand(install_zsh)
+terminal_comand(configure_zsh)
 terminal_comand(default_zsh)
 terminal_comand(docker_down)
 terminal_comand(docker_dependencies)
