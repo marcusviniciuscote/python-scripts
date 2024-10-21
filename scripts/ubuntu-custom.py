@@ -38,7 +38,7 @@ test_docker = "sudo docker run hello-world"
 terminal_comand(update_and_upgrade)
 terminal_comand(install_some_programs)
 terminal_comand(install_zsh)
-#terminal_comand(docker_down)
+terminal_comand(docker_down)
 terminal_comand(docker_dependencies)
 terminal_comand(install_docker)
 terminal_comand(test_docker)
