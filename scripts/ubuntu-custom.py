@@ -47,7 +47,7 @@ test_docker = "docker run hello-world"
 terminal_comand(update_and_upgrade)
 terminal_comand(install_some_programs)
 terminal_comand(install_zsh)
-terminal_comand(configure_zsh)
+#terminal_comand(configure_zsh)
 terminal_comand(default_zsh)
 terminal_comand(docker_down)
 terminal_comand(docker_dependencies)
