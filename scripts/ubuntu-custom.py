@@ -16,7 +16,7 @@ def aliases_comand(alias, comand):
     comand = comand to execute
     '''
     ac = f'alias {alias}="{comand}"'
-    path = '~/project/my-dot-files/aliases.zsh'
+    path = '~/.oh-my-zsh/custom/aliases.zsh'
     aliases = 'echo '+'\'alias '+alias+'="'+comand+'"'+'\' >> '+path
     terminal_comand(aliases)
 
@@ -32,7 +32,11 @@ docker_dependencies = 'echo \ "deb [arch=$(dpkg --print-architecture) signed-by=
 
 install_docker = "sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin"
 
-test_docker = "sudo docker run hello-world"
+#test_docker_sudo = "sudo docker run hello-world"
+
+docker_post_install = "sudo groupadd docker && sudo usermod -aG docker $USER && newgrp docker"
+
+test_docker = "docker run hello-world"
 
 
 terminal_comand(update_and_upgrade)
