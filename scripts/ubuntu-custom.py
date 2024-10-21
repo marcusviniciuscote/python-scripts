@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import subprocess
+from time import sleep
 
 def terminal_comand(comand):
     '''
@@ -8,6 +9,7 @@ def terminal_comand(comand):
     comand = comand to execute
     '''
     subprocess.call([comand], shell=True)
+    sleep(1)
 
 def aliases_comand(alias, comand):
     '''
@@ -42,22 +44,23 @@ test_docker = "docker run hello-world"
 
 
 terminal_comand(update_and_upgrade)
+
 terminal_comand(install_some_programs)
 terminal_comand(install_zsh)
-#terminal_comand(docker_down)
-#terminal_comand(docker_dependencies)
-#terminal_comand(install_docker)
-#terminal_comand(docker_post_install)
-#terminal_comand(test_docker)
-#terminal_comand(docker_start_on_boot)
+terminal_comand(docker_down)
+terminal_comand(docker_dependencies)
+terminal_comand(install_docker)
+terminal_comand(docker_post_install)
+terminal_comand(test_docker)
+terminal_comand(docker_start_on_boot)
 
 #setting zsh is default
 default_zsh = "chsh -s /usr/bin/zsh"
 
 #adding aliases
-aliases_comand('ls', 'eza --icons')
+""" aliases_comand('ls', 'eza --icons')
 aliases_comand('ll', 'eza --icons -la')
 aliases_comand('cat', 'batcat')
 aliases_comand('atualiza', update_and_upgrade)
 aliases_comand('desliga', shutdown)
-
+ """
