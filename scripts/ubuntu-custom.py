@@ -45,6 +45,7 @@ terminal_comand(install_zsh)
 terminal_comand(docker_down)
 terminal_comand(docker_dependencies)
 terminal_comand(install_docker)
+terminal_comand(docker_post_install)
 terminal_comand(test_docker)
 
 #setting zsh is default
