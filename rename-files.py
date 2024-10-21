@@ -2,7 +2,9 @@
 
 import os
 
-path = os.path.dirname('/home/marcus/projects/tests/')
+enter_path = str(input('Enter the entire path to rename the files: ')).strip()
+
+path = os.path.dirname(enter_path)
 
 files = os.listdir(path)
 
