@@ -57,10 +57,12 @@ terminal_comand(docker_start_on_boot)
 #setting zsh is default
 default_zsh = "chsh -s /usr/bin/zsh"
 
+terminal_comand(default_zsh)
+
 #adding aliases
-""" aliases_comand('ls', 'eza --icons')
+aliases_comand('ls', 'eza --icons')
 aliases_comand('ll', 'eza --icons -la')
 aliases_comand('cat', 'batcat')
 aliases_comand('atualiza', update_and_upgrade)
 aliases_comand('desliga', shutdown)
- """
+
