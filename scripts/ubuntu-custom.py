@@ -30,12 +30,15 @@ docker_dependencies = 'echo \ "deb [arch=$(dpkg --print-architecture) signed-by=
 
 install_docker = "sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin"
 
+test_docker = "sudo docker run hello-world"
+
 
 terminal_comand(update_and_upgrade)
 terminal_comand(install_some_programs)
 terminal_comand(install_zsh)
 terminal_comand(docker_dependencies)
 terminal_comand(install_docker)
+terminal_comand(test_docker)
 
 #setting zsh is default
 default_zsh = "chsh -s /usr/bin/zsh"
