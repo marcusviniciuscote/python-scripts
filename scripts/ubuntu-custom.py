@@ -30,7 +30,7 @@ docker_down = 'sudo install -m 0755 -d /etc/apt/keyrings && sudo curl -fsSL http
 
 docker_dependencies = 'echo \ "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \ $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \ sudo tee /etc/apt/sources.list.d/docker.list > /dev/null && sudo apt-get update'
 
-install_docker = "sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin"
+install_docker = "sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin"
 
 test_docker = "sudo docker run hello-world"
 
