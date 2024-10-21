@@ -22,9 +22,11 @@ def aliases_comand(alias, comand):
 
 update_and_upgrade = "sudo apt update && sudo apt upgrade -y && sudo apt autoremove"
 shutdown = "shutdown -h now"
-install_some_programs = "sudo apt install -y neofetch vim neovim virtualbox virtualbox-guest-additions-iso virtualbox-guest-utils eza bat zsh zsh-autosuggestions zsh-syntax-highlighting htop ca-certificates curl docker-ce docker-ce-cli containerd.io docker-compose-plugin"
+install_some_programs = "sudo apt install -y neofetch vim neovim virtualbox virtualbox-guest-additions-iso virtualbox-guest-utils eza bat zsh zsh-autosuggestions zsh-syntax-highlighting htop ca-certificates curl"
 
 install_zsh = "sh -c '$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)'"
+
+docker_down = 'sudo install -m 0755 -d /etc/apt/keyrings && sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc && sudo chmod a+r /etc/apt/keyrings/docker.asc'
 
 docker_dependencies = 'echo \ "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \ $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \ sudo tee /etc/apt/sources.list.d/docker.list > /dev/null && sudo apt-get update'
 
@@ -36,6 +38,7 @@ test_docker = "sudo docker run hello-world"
 terminal_comand(update_and_upgrade)
 terminal_comand(install_some_programs)
 terminal_comand(install_zsh)
+#terminal_comand(docker_down)
 terminal_comand(docker_dependencies)
 terminal_comand(install_docker)
 terminal_comand(test_docker)
