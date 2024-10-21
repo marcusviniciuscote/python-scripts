@@ -61,4 +61,3 @@ aliases_comand('ll', 'eza --icons -la')
 aliases_comand('cat', 'batcat')
 aliases_comand('atualiza', update_and_upgrade)
 aliases_comand('desliga', shutdown)
-
