@@ -28,6 +28,8 @@ install_some_programs = "sudo apt install -y neofetch vim neovim virtualbox virt
 
 install_zsh = "sh -c '$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)'"
 
+default_zsh = "chsh -s /usr/bin/zsh"
+
 docker_down = 'sudo install -m 0755 -d /etc/apt/keyrings && sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc && sudo chmod a+r /etc/apt/keyrings/docker.asc'
 
 docker_dependencies = 'echo \ "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \ $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \ sudo tee /etc/apt/sources.list.d/docker.list > /dev/null && sudo apt-get update'
@@ -42,9 +44,7 @@ docker_start_on_boot = "sudo systemctl enable docker.service && sudo systemctl e
 
 test_docker = "docker run hello-world"
 
-
 terminal_comand(update_and_upgrade)
-
 terminal_comand(install_some_programs)
 terminal_comand(install_zsh)
 terminal_comand(docker_down)
@@ -53,10 +53,6 @@ terminal_comand(install_docker)
 terminal_comand(docker_post_install)
 terminal_comand(test_docker)
 terminal_comand(docker_start_on_boot)
-
-#setting zsh is default
-default_zsh = "chsh -s /usr/bin/zsh"
-
 terminal_comand(default_zsh)
 
 #adding aliases
