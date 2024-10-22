@@ -11,17 +11,6 @@ def terminal_comand(comand):
     subprocess.call([comand], shell=True)
     sleep(1)
 
-def aliases_comand(alias, comand):
-    '''
-    Add a alias in aliases.zsh
-    alias = name of the alias
-    comand = comand to execute
-    '''
-    ac = f'alias {alias}="{comand}"'
-    path = '~/.oh-my-zsh/custom/aliases.zsh'
-    aliases = 'echo '+'\'alias '+alias+'="'+comand+'"'+'\' >> '+path
-    terminal_comand(aliases)
-
 update_and_upgrade = "sudo apt update && sudo apt upgrade -y && sudo apt autoremove"
 shutdown = "shutdown -h now"
 install_some_programs = "sudo apt install -y neofetch vim neovim virtualbox virtualbox-guest-additions-iso virtualbox-guest-utils eza bat zsh zsh-autosuggestions zsh-syntax-highlighting htop ca-certificates curl wget"
@@ -54,12 +43,4 @@ terminal_comand(docker_post_install)
 terminal_comand(docker_start_on_boot)
 terminal_comand(test_docker)
 terminal_comand(install_zsh)
-
-#adding aliases
-aliases_comand('ls', 'eza --icons')
-aliases_comand('ll', 'eza --icons -la')
-aliases_comand('cat', 'batcat')
-aliases_comand('atualiza', update_and_upgrade)
-aliases_comand('desliga', shutdown)
-
 terminal_comand(default_zsh)
