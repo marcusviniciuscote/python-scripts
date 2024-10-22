@@ -21,7 +21,8 @@ def aliases_comand(alias, comand):
     terminal_comand(aliases)
 
 update_and_upgrade = "sudo apt update && sudo apt upgrade -y && sudo apt autoremove"
-shutdown = "shutdown -h now"
+
+shutdown = "sudo shutdown -h now"
 
 aliases_comand('ls', 'eza --icons')
 aliases_comand('ll', 'eza --icons -la')

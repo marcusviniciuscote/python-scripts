@@ -12,7 +12,7 @@ def terminal_comand(comand):
     sleep(1)
 
 update_and_upgrade = "sudo apt update && sudo apt upgrade -y && sudo apt autoremove"
-shutdown = "shutdown -h now"
+
 install_some_programs = "sudo apt install -y neofetch vim neovim virtualbox virtualbox-guest-additions-iso virtualbox-guest-utils eza bat zsh zsh-autosuggestions zsh-syntax-highlighting htop ca-certificates curl wget"
 
 install_nerd_font = "wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip && cd ~/.local/share/fonts && unzip JetBrainsMono.zip && rm JetBrainsMono.zip && fc-cache -fv"
